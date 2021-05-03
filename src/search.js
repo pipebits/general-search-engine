@@ -20,7 +20,7 @@ class search {
      */
     setType(type){
         if(searchTypes[type] != undefined){
-            this.type = type;
+            this.type = type.toLowerCase();
             return this;
         } else {
             let error = new Error("Type not allowed")
@@ -33,7 +33,7 @@ class search {
      * @returns {search}
      */
     setQuery(query){
-        this.query = query;
+        this.query = query.toLowerCase();
         return this;
     }
 

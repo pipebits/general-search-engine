@@ -17,7 +17,7 @@ module.exports = {
         }
 
         //Parse the output
-        images_array = images_code.map(item => {
+        var images_array = images_code.map(item => {
             var dom = parser.parseFromString(item)
 
             //And make a diferent object to every image

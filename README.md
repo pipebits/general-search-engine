@@ -1,26 +1,12 @@
-
-  
-
-# IMAGE SEARCH ENGINE
-
-  
-
-Este módulo te permitirá buscar modulos en npm, imagenes en google, videos en yt... sin niuna API KEY
-
+This module will allow you to search for modules in npm, images in google, repos in github... without any API KEY
 # Installation
-
 To do the installation correctly you need to have [node](https://nodejs.org/en/) installed
-
 ```
 npm:
 
 npm i general-search-engine
 ```
-  
 ## Usage
-
-  
-
 ```js
 const gse = require("general-search-engine")
 
@@ -46,8 +32,6 @@ This will return an array like this:
 }...]
 */
 ```
-
-
 ## Reference
 Functions references, for examples **GITHUB LINK**
 #### 1. General
@@ -60,7 +44,6 @@ Functions references, for examples **GITHUB LINK**
 ||Email|Contact email
 ||Discord|Discord tag
 ||Github|Github profile
-
 #### 2. Search
 | Function | Result | Comments | 
 |----------|--------|----------|
@@ -69,48 +52,29 @@ Functions references, for examples **GITHUB LINK**
 |  |.setQuery(query)|Set the query to search|
 |  |.setOptions({options})|Set search options|
 |  |.run()|Make the search (This funcion is asynchronous)|
-## Examples
-
-#### Find a npm package:
-```js
-const gse = require("general-search-engine")
-
-async function main(){
-	let petition = new gse.search()
-		.setType("npm")
-		.setQuery("express").run()
-	
-	console.log(await petition)
-	
-	petition = new gse.search()
-		.setType("npm")
-		.setQuery("react").run()
-	
-	console.log(await petition)
-}
-
-main()
-```
+## Return arrays:
+#### Find a npm packages:
+| Return | Object params | Return | 
+|--------|--------|----------|
+|[{...} ...]|title|:String|
+||description|:String|
+||author|:String|
+||version|:String|
+||maintenance|:String|
+||quality|:String|
+||popularity|:String|
 ---
-#### Find a image on internet:
-```js
-const gse = require("general-search-engine")
-
-async function main(){
-	let petition = new gse.search()
-		.setType("image")
-		.setQuery("Pink elephant").run()
-	
-	console.log(await petition)
-	
-	petition = new gse.search()
-		.setType("image")
-		.setQuery("red sky").run()
-	
-	console.log(await petition)
-}
-
-main()
-```
-
-**SOON MORE SEARCH TYPES**
+#### Find a images on internet:
+| Return | Object params | Return | 
+|--------|--------|----------|
+|[{...} ...]|image|:String|
+||title|:String|
+||from|:String|
+---
+#### Github:
+| Return | Object params | Return | 
+|--------|--------|----------|
+|[{...} ...]|title|:String|
+||description|:String|
+||topics|[:String ...]|
+||stars|:String|

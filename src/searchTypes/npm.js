@@ -17,12 +17,12 @@ module.exports = {
         }
 
         //Parse the output
-        packages_array =  packages_code.map(item => {
+        var packages_array =  packages_code.map(item => {
             var dom = parser.parseFromString(item)
             var stats = dom.getElementsByClassName("_4ed4187c").map(item => item = item.attributes)
 
             //And make a diferent object to every package
-            return{
+            return {
                 title: dom.getElementsByClassName("db7ee1ac")[0].innerHTML,
                 description: dom.getElementsByClassName("_8fbbd57d")[0].innerHTML,
                 author: dom.getElementsByClassName("e98ba1cc")[0].innerHTML,
