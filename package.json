@@ -1,7 +1,7 @@
 {
   "name": "general-search-engine",
-  "version": "1.1.1",
-  "description": "",
+  "version": "1.4.0",
+  "description": "This module will allow you to search for modules in npm, images in google, repos in github... without any API KEY GENERAL-SEARCH-ENGINE",
   "main": "./src/index.js",
   "scripts": {
     "test": "node ./tests-examples/image_test.js"
@@ -14,9 +14,11 @@
     "search",
     "google",
     "wikipedia",
-    "youtube",
+    "image",
     "api",
-    "find"
+    "find",
+    "npm",
+    "github"
   ],
   "author": "pipebits <pipeluis777@outlook.com>",
   "license": "MIT",

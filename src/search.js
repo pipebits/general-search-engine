@@ -25,6 +25,7 @@ class search {
         } else {
             let error = new Error("Type not allowed")
             console.error(error)
+            return this;
         }
     }
     /**

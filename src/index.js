@@ -1,7 +1,7 @@
 const search = require("./search")
 
 module.exports = {
-    version: "1.1.1",
+    version: "1.4.0",
     homepage: "https://github.com/pipebits/general-search-engine#readme",
     bugReport: "https://github.com/pipebits/general-search-engine/issues",
     contact: {

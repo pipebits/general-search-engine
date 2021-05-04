@@ -13,7 +13,7 @@ module.exports = {
         
         //Check that we have at least one image
         if(images_code.length == 0){
-            throw(`[IMAGE NOT FOUND]: Query ${query} not found`)
+            throw(`[IMAGE NOT FOUND]`)
         }
 
         //Parse the output
@@ -22,9 +22,9 @@ module.exports = {
 
             //And make a diferent object to every image
             return {
-                image: dom.getElementsByClassName("t0fcAb")[0].attributes[2].value,
-                title: dom.getElementsByClassName("fYyStc")[0].innerHTML,
-                from: dom.getElementsByClassName("fYyStc")[1].innerHTML
+                image: dom.getElementsByClassName("t0fcAb")[0]?.attributes[2].value || null,
+                title: dom.getElementsByClassName("fYyStc")[0]?.innerHTML || null,
+                from: dom.getElementsByClassName("fYyStc")[1]?.innerHTML || null
             }
         })
 

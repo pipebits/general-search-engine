@@ -2,15 +2,15 @@ const gse = require("../src/index")
 
 async function main(){
 	try{
-		let petition = new gse.search()
-			.setType("npm")
+		/*let petition = new gse.search()
+			.setType("twitch")
 			.setQuery("express").run()
 		
-		console.log(await petition)
+		console.log(await petition)*/
 		
 		petition = new gse.search()
-			.setType("npm")
-			.setQuery("react").run()
+			.setType("search")
+			.setQuery("radiometer").setOptions({language: "es"}).run()
 		
 		console.log(await petition)
 	} catch(err){
